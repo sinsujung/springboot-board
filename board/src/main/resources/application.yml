@@ -1,0 +1,21 @@
+# ?? ?? ??
+server:
+    port: 8092
+
+# database ?? ??
+spring:
+    datasource:
+        driver-class-name: oracle.jdbc.OracleDriver
+        url: jdbc:oracle:thin:@localhost:1521:XEPDB1  # Oracle URL
+        username: system
+        password: oracle
+    thymeleaf:
+        cache: false
+
+    # spring data jpa ??
+    jpa:
+        database-platform: org.hibernate.dialect.Oracle21cDialect
+        open-in-view: false
+        show-sql: true
+        hibernate:
+            ddl-auto: update
