@@ -6,15 +6,16 @@ server:
 spring:
     datasource:
         driver-class-name: oracle.jdbc.OracleDriver
-        url: jdbc:oracle:thin:@localhost:1521:XEPDB1  # Oracle URL
+        url: jdbc:oracle:thin:@//localhost:1521/XEPDB1
         username: system
         password: oracle
+
     thymeleaf:
         cache: false
 
     # spring data jpa ??
     jpa:
-        database-platform: org.hibernate.dialect.Oracle21cDialect
+        database-platform: org.hibernate.dialect.OracleDialect
         open-in-view: false
         show-sql: true
         hibernate:
