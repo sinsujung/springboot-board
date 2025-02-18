@@ -5,12 +5,15 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.time.LocalDateTime;
+
 // DB의 테이블 역할을 하는 클래스
 @Entity
 @Getter
 @Setter
 @Table(name = "board_table")
-public class BoardEntity {
+public class BoardEntity extends BaseEntity{
+
     @Id
 //    @GeneratedValue(strategy = GenerationType.SEQUENCE)  // SEQUENCE 사용
 //    private Long id;
