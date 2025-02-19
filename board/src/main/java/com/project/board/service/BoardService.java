@@ -49,4 +49,12 @@ public class BoardService {
             return null;
         }
     }
+
+    public BoardDTO update(BoardDTO boardDTO) {
+        // save(insert) 시 id 값 x
+        // update 시 id 값 필요
+        BoardEntity boardEntity = BoardEntity.toUpdateEntity(boardDTO);
+        boardRepository.save(boardEntity);
+        return findById(boardDTO.getId());
+    }
 }
